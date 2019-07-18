@@ -27,6 +27,39 @@
        </swiper-item>
      </swiper>
    </view>
+   <!-- 视频列表 -->
+   <view class="video_wrap" hover-class="none" hover-stop-propagation="false">
+     <navigator class="video_item" wx:for="{{videosList}}" wx:key="{{index}}">
+       <!-- 图片容器 -->
+       <view class="video_img" hover-class="none" hover-stop-propagation="false">
+         <!-- 图片 -->
+         <image src="{{item.imgSrc}}"></image>
+         <!-- 播放量... -->
+         <view class="video_info" hover-class="none" hover-stop-propagation="false">
+           <!-- 播放量 -->
+           <view class="play_count_wrap" hover-class="none" hover-stop-propagation="false">
+             <!-- 图标 -->
+             <text class="fa-play-circle"></text>
+               
+             <!-- 数值 -->
+             <text class="play_count" selectable="false" space="false" decode="false">{{item.playCount}}</text>
+               
+           </view>
+           <!-- 评论量 -->
+           <view class="comment_count" hover-class="none" hover-stop-propagation="false">
+             
+           </view>
+             
+         </view>
+           
+       </view>
+       <!-- 标题 -->
+       <view class="video_title"  hover-class="none" hover-stop-propagation="false">
+         {{item.desc}}
+       </view>
+         
+     </navigator>
+   </view>
      
-</view>
+ </view>
   
