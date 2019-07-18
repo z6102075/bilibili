@@ -1,0 +1,5 @@
+<view class="main" hover-class="none" hover-stop-propagation="false">
+  <!-- 公共头部 -->
+  <MyTitle></MyTitle>
+</view>
+  
