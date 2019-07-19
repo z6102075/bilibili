@@ -25,5 +25,54 @@
       
 
 </view>
-  
+  <!-- 推荐视频 -->
+  <view class="other_list" hover-class="none" hover-stop-propagation="false">
+      <navigator wx:for="{{othersList}}" wx:key="{{index}}" class="item_other">
+          <!-- 图片容器 -->
+          <view class="other_img_wrap" hover-class="none" hover-stop-propagation="false">
+              <image class="" src="{{item.imgSrc}}" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+                
+          </view>
+            
+          <!-- 视频详情 -->
+          <view class="other_info" hover-class="none" hover-stop-propagation="false">
+              <!-- 标题 -->
+              <view class="other_title" hover-class="none" hover-stop-propagation="false">{{item.title}}</view>
+                
+              <!-- 播放量 -->
+              <view class="other_detail" hover-class="none" hover-stop-propagation="false">
+                  <!-- 播放量 -->
+                  <text class="play_count">{{item.playMsg}}次观看</text>
+                  <!-- 评论 -->
+                  <text class="comment_count">{{item.commentCount}}</text>
+              </view>
+          </view>
+            
+      </navigator>
+  </view>
+  <!-- 评论列表 -->
+    <view class="comment_wrap" hover-class="none" hover-stop-propagation="false">
+        <view class="cmment_title">
+            评论({{commentData.commentTotalCount}})
+        </view>
+        <view class="comment_list">
+                <view class="comment_item" wx:for="{{commentData.commentList}}" wx:key="{{index}}">
+                    <!-- 左侧 -->
+                    <view class="comment_user">
+                        <image src="{{item.userIconSrc}}" mode="widthFix"></image>
+                    </view>
+                    <!-- 右侧 -->
+                    <view class="comment_info" hover-class="none" hover-stop-propagation="false">
+                        <view class="comment_detail">
+                            <text class="author" selectable="false" space="false" decode="false">{{item.username}}</text>
+                            <text class="date" selectable="false" space="false" decode="false">{{item.commentDate}}</text>  
+                        </view>
+                        <view class="comment_content" hover-class="none" hover-stop-propagation="false">{{item.commentInfo}}</view>
+                          
+                    </view>
+                      
+                </view>
+        </view>
+    </view>
+      
 </view>
