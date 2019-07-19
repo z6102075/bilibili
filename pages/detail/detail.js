@@ -20,7 +20,8 @@ Page({
   getCurrentVideo(videoId){
     let that=this;
     wx.request({
-      url: 'https://easy-mock.com/mock/5c1dfd98e8bfa547414a5278/bili/videoDetail?id='+videoId,
+      url: 'https://easy-mock.com/mock/5ccc2cc89e5cbc7d96b29785/bili/videoDetail?id='+videoId,
+      
 
       success(res){
         // success
@@ -38,6 +39,18 @@ Page({
       }
     })
   },
+  // 获取推荐视频
+  getOthersList(videoId){
+    wx.request({
+      url:"https://easy-mock.com/mock/5ccc2cc89e5cbc7d96b29785/bili/videoDetail?id="+videoI,
+      success(res){
+        console.log(res);
+      }
+    })
+  },
+
+
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

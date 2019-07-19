@@ -5,6 +5,25 @@
 <view class="video_info" hover-class="none" hover-stop-propagation="false">
     <!-- 视频标签 -->
     <video src="{{videoInfo.videoSrc}}" controls></video>
+    <!-- 视频标题 -->
+    <view class="video_title" hover-class="none" hover-stop-propagation="false">
+        <text class="" selectable="false" space="false" decode="false">{{videoInfo.videoTitle}}</text>
+          <text class="fa fa-angle-down" selectable="false" space="false" decode="false"></text>   
+    </view>
+      
+    <!-- 视频作者。。 -->
+    <view class="video_detail" hover-class="none" hover-stop-propagation="false">
+        <!-- 作者 -->
+        <text class="author" selectable="false" space="false" decode="false">{{videoInfo.author}}</text>  
+        <!-- 播放量 -->
+        <text class="play_count" selectable="false" space="false" decode="false">{{videoInfo.playCount}}</text>
+        <!-- 评论量 -->
+        <text class="comment_count" selectable="false" space="false" decode="false">{{videoInfo.commentCount}}弹幕</text>
+        <!-- 时间 -->
+        <text class="date" selectable="false" space="false" decode="false">{{videoInfo.date}}</text>
+    </view>
+      
+
 </view>
   
 </view>
