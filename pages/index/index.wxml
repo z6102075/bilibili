@@ -1,4 +1,4 @@
-<view class="main" hover-class="none" hover-stop-propagation="false">
+<view class="main">
   <!-- 公共头部 -->
   <MyTitle></MyTitle>
   <!-- 首页导航 -->
@@ -29,34 +29,34 @@
    </view>
    <!-- 视频列表 -->
    <view class="video_wrap" hover-class="none" hover-stop-propagation="false">
-     <navigator class="video_item" wx:for="{{videosList}}" wx:key="{{index}}">
+     <navigator url="../detail/detail?id={{item.id}}" class="video_item" wx:for="{{videosList}}" wx:key="{{index}}">
        <!-- 图片容器 -->
-       <view class="video_img" hover-class="none" hover-stop-propagation="false">
+       <view class="video_img">
          <!-- 图片 -->
-         <image src="{{item.imgSrc}}"></image>
+         <image mode="widthFix" src="{{item.imgSrc}}"></image>
          <!-- 播放量... -->
          <view class="video_info" hover-class="none" hover-stop-propagation="false">
            <!-- 播放量 -->
            <view class="play_count_wrap" hover-class="none" hover-stop-propagation="false">
              <!-- 图标 -->
-             <text class="fa-play-circle"></text>
-               
+             <text class="fa fa-play-circle-o"></text>
              <!-- 数值 -->
-             <text class="play_count" selectable="false" space="false" decode="false">{{item.playCount}}</text>
-               
+             <text class="play_count" selectable="false" space="false" decode="false">{{item.playCount}}
+              </text>  
            </view>
            <!-- 评论量 -->
-           <view class="comment_count" hover-class="none" hover-stop-propagation="false">
-             
+           <view class="comment_count_row" hover-class="none" hover-stop-propagation="false">
+             <!-- 图标 -->
+             <text class="fa fa-commenting-o" selectable="false" space="false" decode="false">
+             </text>
+             <!-- 数值 -->
+             <text class="comment_count" selectable="false" space="false" decode="false">{{item.commentCount}}
+             </text>
            </view>
-             
          </view>
-           
        </view>
        <!-- 标题 -->
-       <view class="video_title"  hover-class="none" hover-stop-propagation="false">
-         {{item.desc}}
-       </view>
+       <view class="video_title">{{item.desc}}</view>
          
      </navigator>
    </view>

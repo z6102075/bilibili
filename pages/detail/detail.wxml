@@ -1,0 +1,10 @@
+<view class="main">
+<!-- 公共的头部 -->
+<MyTitle></MyTitle>
+<!-- 视频详情 -->
+<view class="video_info" hover-class="none" hover-stop-propagation="false">
+    <!-- 视频标签 -->
+    <video src="{{videoInfo.videoSrc}}" controls></video>
+</view>
+  
+</view>
